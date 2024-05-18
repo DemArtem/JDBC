@@ -1,3 +1,4 @@
+import java.awt.*;
 import java.sql.*;
 
 public class H2JDBC {
@@ -5,7 +6,7 @@ public class H2JDBC {
 
     public static void main(String[] args) throws SQLException {
         try(
-                Connection connection = DriverManager.getConnection("jdbc:h2:H2/src/main/resources/dbase.db","sa"," ");
+                Connection connection = DriverManager.getConnection("jdbc:h2:C:\\Users\\gk\\Desktop\\untitled\\H2\\src\\main\\resources\\dbase.db","sa","");
         )
         {
             statement = connection.createStatement();
@@ -24,9 +25,9 @@ public class H2JDBC {
 
         statement.setQueryTimeout(30);  // set timeout to 30 sec.
         //Список всех служащих
-        ResultSet rs = statement.executeQuery("select name, salary from employer");
+        ResultSet rs = statement.executeQuery("select name from character");
         while(rs.next())
-            System.out.printf("name: %s, salary: %f%n",rs.getString("name"), rs.getFloat("salary"));
+            System.out.printf("name: %s, %n",rs.getString("name"));
     }
 
     public static void create() throws SQLException {
