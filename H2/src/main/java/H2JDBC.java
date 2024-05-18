@@ -1,17 +1,17 @@
 import java.sql.*;
 
-public class SqliteJDBC {
+public class H2JDBC {
     private static Statement statement = null;
 
     public static void main(String[] args) throws SQLException {
         try(
-                Connection connection = DriverManager.getConnection("jdbc:sqlite:Sqlite/src/main/resources/employers.db");
+                Connection connection = DriverManager.getConnection("jdbc:h2:H2/src/main/resources/dbase.db","sa"," ");
         )
         {
             statement = connection.createStatement();
-            create();
-            update();
-            delete();
+            //create();
+            //update();
+            //delete();
             readAll();
         }
         catch(SQLException e)
