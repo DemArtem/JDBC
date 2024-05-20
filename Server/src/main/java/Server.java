@@ -16,7 +16,7 @@ public class Server {
         serverSocket = new ServerSocket(777);
         while (true){
             clientSocket = serverSocket.accept();
-            out = new PrintWriter(clientSocket.getOutputStream());
+            out = new PrintWriter(clientSocket.getOutputStream(), true);
             in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
             String message = in.readLine();
             if (message.equals("hello"))
