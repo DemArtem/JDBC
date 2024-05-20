@@ -15,8 +15,8 @@ public class MySQLJDBC {
 
     public static void readAll() throws SQLException {
         //Список всех служащих
-        ResultSet rs = statement.executeQuery("select name from character");
+        ResultSet rs = statement.executeQuery("select name from student");
         while (rs.next())
             System.out.printf("name: %s%n", rs.getString("name"));
     }
-}
+} 
