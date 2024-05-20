@@ -12,6 +12,8 @@
         <module>Sqlite</module>
         <module>H2</module>
         <module>MySQL</module>
+        <module>Server</module>
+        <module>Client</module>
     </modules>
 
     <properties>
