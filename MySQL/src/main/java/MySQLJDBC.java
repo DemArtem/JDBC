@@ -12,6 +12,7 @@ public class MySQLJDBC {
             readAll();
             updateUniv();
 
+
         } catch (SQLException e) {
             e.printStackTrace(System.err);
         }

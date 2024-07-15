@@ -1,0 +1,4 @@
+2024-05-18 21:14:18.823485+03:00 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "EMPLOYER" не найдена
+Table "EMPLOYER" not found; SQL statement:
+select name, salary from employer [42102-224]
